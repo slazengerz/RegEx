@@ -10,9 +10,28 @@ public class Utility {
     //and returns the string
     private Pattern pattern;
     private Matcher matcher;
+
     public String getInput(){
         Scanner sc=new Scanner(System.in);
         String input=sc.next();
+        return input;
+    }
+
+
+    public int getNoOfLines(){
+        int nooflines=0;
+        Scanner sc=new Scanner(System.in);
+        nooflines= sc.nextInt();
+        sc.nextLine();
+        return nooflines;
+    }
+
+    public String[] getListOfInput(int nooflines){
+        Scanner sc=new Scanner(System.in);
+        String[] input=new String[nooflines];
+        for(int i=0;i<nooflines;i++){
+            input[i]=sc.nextLine();
+        }
         return input;
     }
     //this method returns true or false if the pattern is matched or not
